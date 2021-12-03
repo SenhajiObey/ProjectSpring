@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/backend-cart/backend-cart.iml" filepath="$PROJECT_DIR$/backend-cart/backend-cart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-comment/backend-comment.iml" filepath="$PROJECT_DIR$/backend-comment/backend-comment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-product/backend-product.iml" filepath="$PROJECT_DIR$/backend-product/backend-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-user/backend-user.iml" filepath="$PROJECT_DIR$/backend-user/backend-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontend-user/frontend-user.iml" filepath="$PROJECT_DIR$/frontend-user/frontend-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/groupey-projetspring.iml" filepath="$PROJECT_DIR$/.idea/groupey-projetspring.iml" />
+    </modules>
+  </component>
+</project>

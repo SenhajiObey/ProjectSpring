@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="backend-user" />
+        <module name="backend-cart" />
+        <module name="frontend-user" />
+        <module name="backend-product" />
+        <module name="backend-comment" />
+        <module name="eureka" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend-cart" target="11" />
+      <module name="backend-comment" target="1.5" />
+      <module name="backend-product" target="1.5" />
+      <module name="backend-user" target="1.5" />
+      <module name="eureka" target="11" />
+      <module name="frontend-user" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="backend-cart" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+    </option>
+  </component>
+</project>
