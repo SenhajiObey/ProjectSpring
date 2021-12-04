@@ -8,16 +8,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 @Component
-@FeignClient(name = "backend-user", url = "localhost:9002")
+@FeignClient(name = "backend-user", url = "localhost:9003")
 public interface FrontendUserProxy {
 
-    @PostMapping("/user/sign-up")
-    User createUser(@RequestBody User user);
+    @PostMapping("/register")
+    boolean createUser(@RequestBody User user);
 
-    @PostMapping("/user/sign-in")
-    boolean verifyUser(@RequestBody User user);
+    @PostMapping("/token")
+    String createToken(@RequestBody User user);
 
-    @GetMapping("/user/{mail}")
-    User getUser(@PathVariable("mail") String mail);
-
+    @PostMapping("/login")
+    boolean checkUser(@RequestBody User user);
 }

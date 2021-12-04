@@ -8,13 +8,13 @@ public interface UsersService {
 
   List<User> getUsers();
 
-  List<User> getUser(String email);
-
-  List<User> createUsers(User user);
+  User createUser(User user);
 
   List<User> deleteUsers(int id);
 
   List<User> updateUsers(int id);
+
+  User getUserByEmail(String email);
 }
 
 

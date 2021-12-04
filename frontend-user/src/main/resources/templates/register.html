@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page de login</title>
+
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <h3> Inscription </h3>
+        <!-- Login Form -->
+        <form method="post" th:action="@{/register}" th:object="${user}">
+            <div><input type="text" th:field="*{email}" id="email" class="fadeIn second" name="email" placeholder="E-mail"></div>
+            <div><input type="text" th:field="*{password}" id="password" class="fadeIn third" name="login" placeholder="mot de passe"></div>
+            <div><input type="text" th:field="*{lastName}" id="nom" class="fadeIn third" name="login" placeholder="Nom"></div>
+            <div><input type="text" th:field="*{firstName}" id="prenom" class="fadeIn third" name="login" placeholder="prénom"></div>
+            <div><label>Rôle :</label>
+                <select th:field="*{role}">
+                    <option th:value="admin" th:text="Admin"/>
+                    <option th:value="guest" th:text="Guest"/>
+                </select></div>
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

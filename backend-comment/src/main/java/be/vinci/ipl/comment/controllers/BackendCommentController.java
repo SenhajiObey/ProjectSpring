@@ -7,12 +7,17 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/comment")
+@RequestMapping("/")
 public class BackendCommentController {
 
   private CommentService service;
+
+  public BackendCommentController(CommentService commentService){
+    this.service = commentService;
+  }
 
   @GetMapping
     public List<Comment> getAllComments() {
@@ -26,7 +31,8 @@ public class BackendCommentController {
 
   @PostMapping()
     public boolean insertComments(@RequestBody Comment comment){
-      return service.insertComments(comment);
+
+    return service.insertComments(comment);
   }
 
   @GetMapping("/{id}+{idProduct}")
@@ -50,8 +56,8 @@ public class BackendCommentController {
   }
 
   @PostMapping("/updateTextAndDate")
-  public boolean updateTextAndValidity(@RequestBody String text,@RequestBody Date newDate){
-    return service.updateTextAndValidity(text,newDate);
+  public boolean updateTextAndValidity(@RequestBody int id,@RequestBody String text,@RequestBody Date newDate){
+    return service.updateTextAndValidity(id,text,newDate);
   }
 
 

@@ -4,6 +4,7 @@ import be.vinci.ipl.comment.model.Comment;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public interface CommentService {
 
@@ -21,5 +22,5 @@ public interface CommentService {
 
     public float getAverageEvaluationOfProduct(int idProduct);
 
-    public boolean updateTextAndValidity(String text, Date newDate);
+    public boolean updateTextAndValidity(int idComment,String text, Date newDate);
 }
